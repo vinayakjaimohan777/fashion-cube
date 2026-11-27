@@ -1,3 +1,4 @@
+
 /*
  ** Author: Santosh Kumar Dash
  ** Author URL: http://santoshdash.epizy.com/
@@ -17,7 +18,7 @@ import CategoryContainer from "../views/Category/CategoryContainer";
 
 var routes = [
   {
-    path: "/fashion-cube",
+    path: "/",
     exact: true,
     layout: BaseLayout,
     component: Home,
@@ -26,15 +27,15 @@ var routes = [
   {
     path: "/home",
     layout: BaseLayout,
-    component: () => <Redirect to="/fashion-cube" />,
+    component: () => <Redirect to="/" />,
   },
   {
-    path: "/fashion-cube/single-product/:id",
+    path: "/single-product/:id",
     layout: BaseLayout,
     component: SingleProductContainer,
   },
   {
-    path: "/fashion-cube/shops/:category",
+    path: "/shops/:category",
     layout: BaseLayout,
     component: CategoryContainer,
   },
