@@ -12,6 +12,15 @@ permissions:
   contents: read
 
 jobs:
+  oidc-debug:
+    runs-on: ubuntu-latest
+    permissions:
+      id-token: write
+      contents: read
+
+    steps:
+      - name: Debug OIDC claims
+        uses: github/actions-oidc-debugger@main
   build-and-push:
     runs-on: ubuntu-latest
 
